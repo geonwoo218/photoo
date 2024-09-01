@@ -111,25 +111,83 @@ body {
 .res{
   width: 1000px;
   height: 800px;
-  background-color: blue;
+  background-color: #adadad;
+  position: relative;
 }
 .res-container{
-  width: 250px;
-  height: 740px;
-  margin-top:15px;
-  background-color: wheat;
+  width: 300px;
+  height: 800px;
+  background-color: rgb(0, 0, 0);
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-top: 15px;
+  float: left;
 }
 .res-imgitem{
   width:250px; 
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 6px;
+  margin: 10px;
+  flex:3;
+  background-color: rgb(169, 166, 241);
 }
 .res-imgitem img{
   width: 85%;
+}
+.coment{
+  width: 300px;
+  flex:2;
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  line-height: 90px;
+  font-weight: bold;
+}
+.template{
+  width: 400px;
+  height: 400px;
+  background-color: rgb(220, 220, 220);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  position: absolute;
+  right: 30px;
+  top: 50px;
+}
+.t{
+  text-align: center;
+  border: 1px solid;
+  line-height: 80px;
+  padding: 10px;
+  margin: 10px;
+}
+.endBtn{
+  width: 400px;
+  height: 100px;
+  right: 30px;
+  bottom: 30px;
+  position: absolute;
+  border-radius: 10px;
+  font-size: 50px;
+  font-weight: bold;
+}
+.t1{
+  background-color: red;
+}
+.t2{
+  background-color: blue;
+}
+.t3{
+  background-color: yellow;
+}
+.t4{
+  background-color: blueviolet;
+}
+.t5{
+  background-color: green;
+}
+.t6{
+  background-color: black;
 }
