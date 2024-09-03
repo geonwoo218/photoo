@@ -46,7 +46,7 @@ const ImageGallery = ({ imgList, onBack, onSelectionComplete }) => {
         </button>
         <button
           onClick={handleSelectionComplete}
-          className="selectBtn"
+          className="selectBtn btnStyle"
           disabled={selectedImages.length !== 4}
         >
           선택완료

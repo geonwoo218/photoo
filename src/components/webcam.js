@@ -30,7 +30,7 @@ const WebcamCapture = ({ onCapture,cnt }) => {
             </div>
             <div className='bottom'>
                 <div className='capture'>
-                    <button className="captureBtn" onClick={handleCapture}>
+                    <button className="captureBtn btnStyle" onClick={handleCapture}>
                         사진 찍기
                     </button>
                 </div>

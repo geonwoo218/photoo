@@ -36,7 +36,7 @@ const SelectedImages = ({ selectedImages }) => {
           </div>
         ))}
       </div>
-      <button className='endBtn'>
+      <button className='endBtn btnStyle'>
         완성하기
       </button>
     </div>
