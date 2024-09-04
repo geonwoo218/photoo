@@ -126,7 +126,7 @@ body {
   float: left;
 }
 .res-imgitem{
-  width:250px; 
+  width:240px; 
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -135,7 +135,7 @@ body {
   background-color: rgb(169, 166, 241);
 }
 .res-imgitem img{
-  width: 85%;
+  width: 100%;
 }
 .coment{
   width: 300px;

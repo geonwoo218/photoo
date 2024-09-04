@@ -22,7 +22,6 @@ const ImageGallery = ({ imgList, onBack, onSelectionComplete }) => {
 
   if (selectionComplete) {
     const selectedImgList = imgList.filter(img => selectedImages.includes(img.id));
-    console.log("25줄"+selectedImgList[0].src);
     return <Onselect selectedImages={selectedImgList} />;
   }
 
