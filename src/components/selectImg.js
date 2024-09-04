@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import html2canvas from 'html2canvas';
+import QRCode from 'qrcode';
 
 const SelectedImages = ({ selectedImages }) => {
   const [selectedTemplate, setTemplate] = useState('default');
@@ -9,30 +10,6 @@ const SelectedImages = ({ selectedImages }) => {
     setTemplate(template);
   };
 
-  const openQrInNewTab = (url) => {
-    const newWindow = window.open("", "_blank", "width=300,height=300");
-    newWindow.document.write(`
-      <html>
-        <head>
-          <title>QR Code</title>
-        </head>
-        <body style="display: flex; align-items: center; justify-content: center; height: 100%; margin: 0;">
-          <div id="qrcode"></div>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-          <script>
-            function generateQRCode() {
-              const qrContainer = document.getElementById('qrcode');
-              qrContainer.innerHTML = '';
-              new QRCode(qrContainer, { text: '${url}', width: 256, height: 256 });
-            }
-            window.onload = generateQRCode;
-          </script>
-        </body>
-      </html>
-    `);
-    newWindow.document.close();
-  };
-
   const handleDownload = () => {
     const container = containerRef.current;
 
@@ -40,36 +17,48 @@ const SelectedImages = ({ selectedImages }) => {
       html2canvas(container).then((canvas) => {
         canvas.toBlob((blob) => {
           const formData = new FormData();
-          console.log(formData);
-          formData.append('image', blob, 'image.png');
+          formData.append('image', blob, 'screenshot.png');
 
           fetch('http://localhost:3001/upload', {
             method: 'POST',
             body: formData,
           })
-            .then(async response => {
-              if (!response.ok) {
-                const text = await response.text();
-                throw new Error(text);
-              }
-              return response.json();
-            })
+            .then(response => response.json())
             .then(data => {
-              openQrInNewTab(data.imageUrl);
+              const imageUrl = data.imageUrl;
+              generateQRCode(imageUrl);
             })
-            .catch(error => console.error('Error uploading image:', error));
-          
+            .catch(err => console.error('Upload failed:', err));
         });
       });
     }
   };
 
+  const generateQRCode = (url) => {
+    QRCode.toDataURL(url)
+      .then((qrCodeUrl) => {
+        const newWindow = window.open("", "_blank", "width=300,height=300");
+        newWindow.document.write(`
+          <html>
+            <head>
+              <title>QR Code</title>
+            </head>
+            <body style="display: flex; align-items: center; justify-content: center; height: 100%; margin: 0;">
+              <img src="${qrCodeUrl}" alt="QR Code">
+              <h2>qr 을 찍어서 나온 이미지를 꾹 눌러 저장해주세요</h2>
+            </body>
+          </html>
+        `);
+        newWindow.document.close();
+      })
+      .catch((err) => {
+        console.error('Failed to generate QR code:', err);
+      });
+  };
+
   return (
     <div className='res'>
-      <div
-        ref={containerRef}
-        className={`res-container ${selectedTemplate}`}
-      >
+      <div ref={containerRef} className={`res-container ${selectedTemplate}`}>
         {selectedImages.map((img) => (
           <div key={img.id} className='res-imgitem'>
             <img src={img.src} alt="ss" />
