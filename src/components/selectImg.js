@@ -64,9 +64,7 @@ const SelectedImages = ({ selectedImages }) => {
             <img src={img.src} alt="ss" />
           </div>
         ))}
-        <div className={`coment ${selectedTemplate}`}>
-          이야앗호
-        </div>
+        
       </div>
       <div className='template'>
         {['첫번째', '두번째', '세번째', '네번째', '다섯번째', '여섯번째'].map((text, index) => (
@@ -80,10 +78,20 @@ const SelectedImages = ({ selectedImages }) => {
           </div>
         ))}
       </div>
-      <button className='endBtn btnStyle' onClick={handleDownload}>
+      <button className='endBtn btnStyle1' onClick={handleDownload}>
         완성하기
       </button>
+
+      {/*qr용 이미지*/}
+      <div className={`res-container ${selectedTemplate} forQR`}>
+        {selectedImages.map((img) => (
+          <div key={img.id} className='res-imgitem'>
+            <img src={img.src} alt="ss" />
+          </div>
+        ))}
+      </div>
     </div>
+    
   );
 };
 

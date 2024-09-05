@@ -4,14 +4,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0; /* 기본 마진 제거 */
+  margin: 0; 
+ background-color:#fffcdd;
 }
 
 .bodycontainer {
-  width: 75s0px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+  width: 850px;
+    height: 850px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
 
 .webcam {
@@ -20,17 +24,17 @@ body {
 }
 
 .top {
-  width: 750px;
-  height: 562px;
+  width: 100%;
+  height: 100%;
   background-color: #000000;
 }
 .bottom {
+  width: 100%;
   height: 100px;
   background-color: #ad91ff;
   display: flex;
   justify-content: center;
   position: relative;
-  padding: 10px;
   color: white;
 }
 
@@ -112,30 +116,42 @@ body {
 /*======selectImg==========*/
 .res{
   width: 1000px;
-  height: 800px;
-  background-color: #adadad;
+  height: 1000px;
   position: relative;
+  margin-top: 15px;
 }
 .res-container{
-  width: 300px;
-  height: 800px;
+  width: 302px;
+    height: 910px;
+    background: url("C:/Users/user/Desktop/세로프레임.png");
   background-color: rgb(0, 0, 0);
   display: flex;
   align-items: center;
   flex-direction: column;
   float: left;
+  margin-top: 20px;
+  margin-left: 50px;
+  padding-top: 15px;
 }
 .res-imgitem{
-  width:240px; 
   display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin: 10px;
-  flex:3;
-  background-color: rgb(169, 166, 241);
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
 }
 .res-imgitem img{
+  width: 240px;
+}
+.forQR{
+  margin-top: 1500px;
+  width: 1060px;
+  height: 3187px;
+}
+.forQR img{
   width: 100%;
+}
+.forQR .res-imgitem{
+  margin-top: 50px;
 }
 .coment{
   width: 300px;
@@ -148,9 +164,8 @@ body {
   font-weight: bold;
 }
 .template{
-  width: 400px;
-  height: 400px;
-  background-color: rgb(220, 220, 220);
+  width: 450px;
+  height: 650px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
@@ -160,19 +175,21 @@ body {
 }
 .t{
   text-align: center;
-  border: 1px solid;
-  line-height: 80px;
-  padding: 10px;
-  margin: 10px;
+    border: 1px solid;
+    line-height: 160px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 35px;
 }
 .endBtn{
-  width: 300px;
-  height: 100px;
-  right: 30px;
-  bottom: 30px;
+  width: 450px;
+  height: 150px;
+  right: 40px;
+  bottom: 60px;
   position: absolute;
-  font-size: 30px;
+  font-size: 45px;
   font-weight: bold;
+  background-color:#c5ebae;
 }
 .t1{
   background-color: red;
@@ -228,4 +245,29 @@ body {
 .btnStyle:active {
   background: var(--color);
   color: #fff;
+}
+
+.btnStyle1 {
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btnStyle1:active {
+  box-shadow: 0px 0px 0px 0px;
+  transform: translate(5px,5px);
+  
+}
+
+@media (min-width: 768px) {
+  .btnStyle1 {
+    padding: 0.25em 0.75em;
+  }
 }

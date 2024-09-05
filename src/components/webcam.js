@@ -1,10 +1,12 @@
 import React from 'react';
 import Webcam from "react-webcam";
 import '../App.css'
+
 const videoConstraints = {
+    width: 600,  // 3 units
+    height: 800, // 4 units
     facingMode: "user"
 };
-
 
 const WebcamCapture = ({ onCapture,cnt }) => {
     const webcamRef = React.useRef(null);
@@ -24,7 +26,7 @@ const WebcamCapture = ({ onCapture,cnt }) => {
                         mirrored
                         videoConstraints={videoConstraints}
                         ref={webcamRef}
-                        style={{ width: "100%", height: "100%" }}
+                        style={{ width: '800px', height: '600px' }}
                     />
                 </div>
             </div>
