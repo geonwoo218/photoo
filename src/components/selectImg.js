@@ -1,8 +1,8 @@
 import React, { useState, useRef } from 'react';
 import html2canvas from 'html2canvas';
-import QRCode from 'qrcode';
+import {generateQRCode} from './qrCode';
 
-const SelectedImages = ({ selectedImages }) => {
+const SelectedImages = ({ selectedImages,onStart }) => {
   const [selectedTemplate, setTemplate] = useState('default');
   const containerRef = useRef(null);
 
@@ -34,27 +34,9 @@ const SelectedImages = ({ selectedImages }) => {
     }
   };
 
-  const generateQRCode = (url) => {
-    QRCode.toDataURL(url)
-      .then((qrCodeUrl) => {
-        const newWindow = window.open("", "_blank", "width=300,height=300");
-        newWindow.document.write(`
-          <html>
-            <head>
-              <title>QR Code</title>
-            </head>
-            <body style="display: flex; align-items: center; justify-content: center; height: 100%; margin: 0;">
-              <img src="${qrCodeUrl}" alt="QR Code">
-              <h2>qr 을 찍어서 나온 이미지를 꾹 눌러 저장해주세요</h2>
-            </body>
-          </html>
-        `);
-        newWindow.document.close();
-      })
-      .catch((err) => {
-        console.error('Failed to generate QR code:', err);
-      });
-  };
+  const goStartPage = ()=>{
+    window.location.reload();
+  }
 
   return (
     <div className='res'>
@@ -81,7 +63,9 @@ const SelectedImages = ({ selectedImages }) => {
       <button className='endBtn btnStyle1' onClick={handleDownload}>
         완성하기
       </button>
-
+      <button className='backBtn btnStyle1' onClick={goStartPage}>
+        처음으로
+      </button>
       {/*qr용 이미지*/}
       <div className={`res-container ${selectedTemplate} forQR`}>
         {selectedImages.map((img) => (

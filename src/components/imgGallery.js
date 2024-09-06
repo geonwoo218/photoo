@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../App.css';
 import Onselect from './selectImg'
-const ImageGallery = ({ imgList, onBack, onSelectionComplete }) => {
+const ImageGallery = ({ imgList, onBack}) => {
   const [selectedImages, setSelectedImages] = useState([]);
   const [selectionComplete, setSelectionComplete] = useState(false);
 
@@ -22,7 +22,7 @@ const ImageGallery = ({ imgList, onBack, onSelectionComplete }) => {
 
   if (selectionComplete) {
     const selectedImgList = imgList.filter(img => selectedImages.includes(img.id));
-    return <Onselect selectedImages={selectedImgList} />;
+    return <Onselect selectedImages={selectedImgList}/>;
   }
 
   return (
