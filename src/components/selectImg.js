@@ -40,7 +40,7 @@ const SelectedImages = ({ selectedImages,onStart }) => {
 
   return (
     <div className='res'>
-      <div ref={containerRef} className={`res-container ${selectedTemplate}`}>
+      <div className={`res-container ${selectedTemplate}`}>
         {selectedImages.map((img) => (
           <div key={img.id} className='res-imgitem'>
             <img src={img.src} alt="ss" />
@@ -67,7 +67,7 @@ const SelectedImages = ({ selectedImages,onStart }) => {
         처음으로
       </button>
       {/*qr용 이미지*/}
-      <div className={`res-container ${selectedTemplate} forQR`}>
+      <div ref={containerRef} className={`res-container ${selectedTemplate} forQR`}>
         {selectedImages.map((img) => (
           <div key={img.id} className='res-imgitem'>
             <img src={img.src} alt="ss" />
