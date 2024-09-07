@@ -27,7 +27,7 @@ const ImageGallery = ({ imgList, onBack}) => {
 
   return (
     <div>
-      <h1>Captured Photos</h1>
+      <h1>사진 고르기</h1>
       <div className="image-gallery-container">
         {imgList.map((img, index) => (
           <div
@@ -40,8 +40,8 @@ const ImageGallery = ({ imgList, onBack}) => {
         ))}
       </div>
       <div className='selectBottom'>
-        <button onClick={onBack} className="back-button">
-          되돌아가기
+        <button onClick={onBack} className="back-button btnStyle">
+          다시찍기
         </button>
         <button
           onClick={handleSelectionComplete}

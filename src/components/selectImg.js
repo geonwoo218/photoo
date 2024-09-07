@@ -53,7 +53,6 @@ const SelectedImages = ({ selectedImages,onStart }) => {
           <div
             key={index}
             className='t'
-            id={`t${index + 1}`}
             onClick={() => handleTemplateClick(`t${index + 1}`)}
           >
             {text}
@@ -68,8 +67,8 @@ const SelectedImages = ({ selectedImages,onStart }) => {
       </button>
       {/*qr용 이미지*/}
       <div ref={containerRef} className={`res-container ${selectedTemplate} forQR`}>
-        {selectedImages.map((img) => (
-          <div key={img.id} className='res-imgitem'>
+        {selectedImages.map((img,index) => (
+          <div key={img.id} className={`res-imgitem qr${index+1}`}>
             <img src={img.src} alt="ss" />
           </div>
         ))}
