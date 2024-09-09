@@ -151,9 +151,14 @@ body {
 
 .res-container {
   width: 302px;
+<<<<<<< Updated upstream
   height: 910px;
   /*background: url("images/세로프레임.png");*/
   background-image: url("images/image.png");
+=======
+    height: 910px;
+    background: url("/src/images/세로프레임.png");
+>>>>>>> Stashed changes
   background-color: rgb(0, 0, 0);
   display: flex;
   align-items: center;
