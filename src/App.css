@@ -2,20 +2,28 @@
 .start-page {
   width: 800px;
   height: 600px;
-  border: 1px solid;
   position: relative;
+  border: 1px solid #00000000;
 }
 
 .startTitle {
   width: 100%;
-  font-size: 40px;
+  height: 100px;
+  line-height: 100px;
+  font-size: 60px;
   float: left;
   text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
 }
 
 .startBtn {
   width: 500px;
   height: 200px;
+  font-size: 40px;
+  margin-left: calc(100% / 2 - 250px);
+  margin-top: 230px;
+  font-weight: bold;
 }
 
 /*======webcam.js===========*/
@@ -96,6 +104,7 @@ body {
 
 .image-item {
   text-align: center;
+  min-height: 210px;
 }
 
 .image-item:hover {
@@ -103,12 +112,12 @@ body {
 }
 
 .image-item.selected img {
-  box-shadow: 0px 0px 20px aqua;
+  box-shadow: 0px 0px 20px rgb(255, 255, 255);
 }
 
 .image-item img {
-  width: 250px;
-  height: 200px;
+  min-width: 250px;
+  min-height: 200px;
 }
 
 .selectBottom {
@@ -151,14 +160,9 @@ body {
 
 .res-container {
   width: 302px;
-<<<<<<< Updated upstream
   height: 910px;
-  /*background: url("images/세로프레임.png");*/
   background-image: url("images/image.png");
-=======
-    height: 910px;
-    background: url("/src/images/세로프레임.png");
->>>>>>> Stashed changes
+  background-size: cover;
   background-color: rgb(0, 0, 0);
   display: flex;
   align-items: center;
@@ -177,7 +181,9 @@ body {
 }
 
 .res-imgitem img {
-  width: 240px;
+  width: 251px;
+  min-height: 192px;
+  background: #ffffff;
 }
 
 .forQR {
@@ -187,11 +193,8 @@ body {
 }
 
 .forQR img {
-  width: 100%;
-}
-
-.forQR .res-imgitem {
-  margin-top: 50px;
+  min-width: 850px;
+  min-height: 669px;
 }
 
 .coment {
@@ -227,41 +230,69 @@ body {
 
 .endBtn {
   width: 450px;
-  height: 150px;
+  height: 100px;
   right: 40px;
-  bottom: 60px;
+  bottom: 165px;
   position: absolute;
   font-size: 45px;
   font-weight: bold;
   background-color: #c5ebae;
 }
 
+.backBtn {
+  width: 450px;
+  height: 90px;
+  right: 40px;
+  bottom: 60px;
+  position: absolute;
+  font-size: 45px;
+  font-weight: bold;
+  background-color: #ffc592;
+}
+
 .t1 {
-  background-color: red;
+  background: url(images/frame1.png);
+  background-size: cover;
 }
 
 .t2 {
-  background-color: blue;
+  background: url(images/frame2.png);
+  background-size: cover;
 }
 
 .t3 {
-  background-color: yellow;
+  background: url(images/frame3.png);
+  background-size: cover;
 }
 
 .t4 {
-  background-color: blueviolet;
+  background: url(images/frame4.png);
+  background-size: cover;
 }
 
 .t5 {
-  background-color: green;
+  background: url(images/frame5.png);
+  background-size: cover;
 }
 
 .t6 {
-  background-color: black;
+  background: url(images/frame6.png);
+  background-size: cover;
+}
+.qr1{
+  margin-top: 67px;
+}
+.qr2{
+  margin-top: 30px;
+}
+.qr3{
+  margin-top: 32px;
+}
+.qr4{
+  margin-top: 33px;
 }
 
 /*===============버튼 스타일=============*/
-/* CSS */
 .btnStyle {
   --b: 3px;
   /* border thickness */
@@ -320,5 +351,59 @@ body {
 @media (min-width: 768px) {
   .btnStyle1 {
     padding: 0.25em 0.75em;
+  }
+}
+
+.btnStyle2 {
+  align-items: center;
+  background-color: #fee6e3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btnStyle2:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 200px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.btnStyle2:hover:after {
+  transform: translate(0, 0);
+}
+
+.btnStyle2:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.btnStyle2:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .btnStyle2 {
+    padding: 0 40px;
   }
 }
