@@ -34,7 +34,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
-  background-color: #fffcdd;
+  background-color: #ffef85;
 }
 
 .bodycontainer {
@@ -162,7 +162,7 @@ body {
 .res-container {
   width: 302px;
   height: 910px;
-  background-image: url("images/image.png");
+  background-image: url("images/image.png");  
   background-size: cover;
   background-color: rgb(0, 0, 0);
   display: flex;
@@ -171,20 +171,18 @@ body {
   float: left;
   margin-top: 20px;
   margin-left: 50px;
-  padding-top: 15px;
 }
 
 .res-imgitem {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 7px;
-  margin-left: 5px;
+  margin-top: 10px;
 }
 
 .res-imgitem img {
   width: 245px;
-  min-height: 192px;
+  min-height: 185px;
   background: #ffffff;
 }
 
@@ -194,9 +192,18 @@ body {
   height: 3187px;
 }
 
-.forQR img {
+.forQR-imgitem {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 40px;
+  margin-left: 5px;
+}
+
+.forQR-imgitem img {
   min-width: 850px;
   min-height: 669px;
+  background-color: red;
 }
 
 .coment {
@@ -280,18 +287,6 @@ body {
 .t6 {
   background: url(images/frame6.png);
   background-size: cover;
-}
-.qr1{
-  margin-top: 67px;
-}
-.qr2{
-  margin-top: 20px;
-}
-.qr3{
-  margin-top: 25px;
-}
-.qr4{
-  margin-top: 15px;
 }
 
 /*===============버튼 스타일=============*/

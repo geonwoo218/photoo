@@ -68,7 +68,7 @@ const SelectedImages = ({ selectedImages,onStart }) => {
       {/*qr용 이미지*/}
       <div ref={containerRef} className={`res-container ${selectedTemplate} forQR`}>
         {selectedImages.map((img,index) => (
-          <div key={img.id} className={`res-imgitem qr${index+1}`}>
+          <div key={img.id} className={`forQR-imgitem qr${index+1}`}>
             <img src={img.src} alt="ss" />
           </div>
         ))}
