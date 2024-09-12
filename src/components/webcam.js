@@ -3,8 +3,7 @@ import Webcam from "react-webcam";
 import '../App.css'
 
 const videoConstraints = {
-    width: 800,
-    height: 600,
+    width: 1300,
     facingMode: "user"
 };
 
@@ -16,9 +15,13 @@ const WebcamCapture = ({ onCapture,cnt }) => {
         onCapture(imageSrc);
     };
 
+    const timerCapture = ()=>{
+
+    };
+
     return (
         <div className='bodycontainer'>
-            <div className='top'>
+            <div className='left'>
                 <div className='webcam'>
                     <Webcam
                         audio={false}
@@ -26,13 +29,17 @@ const WebcamCapture = ({ onCapture,cnt }) => {
                         mirrored
                         videoConstraints={videoConstraints}
                         ref={webcamRef}
-                        style={{ width: '800px', height: '600px' }}
                     />
                 </div>
             </div>
-            <div className='bottom'>
+            <div className='right'>
+                <div className='timebutton'>
+                    <button className='timerBtn' onClick={timerCapture}>
+                        타이머 사진
+                    </button>
+                </div>
                 <div className='capture'>
-                    <button className="captureBtn btnStyle" onClick={handleCapture}>
+                    <button className="captureBtn" onClick={handleCapture}>
                         사진 찍기
                     </button>
                 </div>

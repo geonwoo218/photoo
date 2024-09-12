@@ -26,8 +26,8 @@ const ImageGallery = ({ imgList, onBack}) => {
   }
 
   return (
-    <div>
-      <h1>사진 고르기</h1>
+    <div className='gallery-container'>
+      <h1 style={{ textAlign: 'center', fontSize: '40px' }}>사진 고르기</h1>
       <div className="image-gallery-container">
         {imgList.map((img, index) => (
           <div
@@ -40,15 +40,15 @@ const ImageGallery = ({ imgList, onBack}) => {
         ))}
       </div>
       <div className='selectBottom'>
-        <button onClick={onBack} className="back-button btnStyle">
-          다시찍기
+        <button onClick={onBack} className="back-button">
+          <img src={require('../images/back.png')} alt="다시" className='galleryImgBtn'/>
         </button>
         <button
           onClick={handleSelectionComplete}
-          className="selectBtn btnStyle"
+          className="selectBtn"
           disabled={selectedImages.length !== 4}
         >
-          선택완료
+          <img src={require('../images/arrow.png')} alt="화살표" className='galleryImgBtn'/>
         </button>
         <p className='selectCnt'>{selectCnt} / 4</p>
       </div>
