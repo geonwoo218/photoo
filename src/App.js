@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './App.css';
 import WebcamCapture from './components/webcam';
 import ImageGallery from './components/imgGallery';
@@ -8,8 +8,11 @@ function App() {
   const [imgs, setImgs] = useState([]);
   const [viewMode, setViewMode] = useState('start');
   const [cnt, setCnt] = useState(0);
+  const shutterSoundRef = useRef(new Audio('/sound/shutter.mp3'));
 
   const handleCapture = (imageSrc) => {
+    shutterSoundRef.current.currentTime = 0;
+    shutterSoundRef.current.play();
     const newImage = {
       id: imgs.length + 1,
       src: imageSrc

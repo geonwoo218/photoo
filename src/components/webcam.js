@@ -12,8 +12,9 @@ const WebcamCapture = ({ onCapture, cnt }) => {
     const [isCapturing, setIsCapturing] = useState(false);
     const [countdown, setCountdown] = useState(3);
     const [videoStyle, setVideoStyle] = useState({});
+    const countSoundRef = useRef(new Audio('/sound/countSound.mp3'));
 
-    const justCapture = ()=>{
+    const justCapture = () => {
         const imageSrc = webcamRef.current.getScreenshot();
         onCapture(imageSrc);
     }
@@ -33,9 +34,13 @@ const WebcamCapture = ({ onCapture, cnt }) => {
         if (isCapturing) {
             intervalId = setInterval(() => {
                 setCountdown((prev) => {
+                    if(prev !== 1) {
+                        countSoundRef.current.currentTime = 0;
+                        countSoundRef.current.play();
+                    }
                     if (prev === 1) {
                         handleCapture(); // 타이머가 1초일 때 사진 캡처
-                        return 3; // 타이머를 3초로 리셋
+                        return 4; // 타이머를 4초로 리셋
                     }
                     return prev - 1;
                 });
@@ -51,6 +56,8 @@ const WebcamCapture = ({ onCapture, cnt }) => {
     }, [isCapturing, handleCapture]);
 
     const startCapturing = () => {
+        countSoundRef.current.currentTime = 0;
+        countSoundRef.current.play();
         setIsCapturing(true);
         setCountdown(3); // 타이머를 3초로 설정
     };
@@ -89,7 +96,7 @@ const WebcamCapture = ({ onCapture, cnt }) => {
                 </div>
                 <div>
                     <button className='captureBtn1' onClick={justCapture}>
-                         바로찍기
+                        바로찍기
                     </button>
                 </div>
                 <div className='counter'>
