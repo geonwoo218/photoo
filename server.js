@@ -27,7 +27,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 // /upload 경로에 대한 POST 요청 처리
 app.post('/upload', upload.single('image'), (req, res) => {
   if (req.file) {
-    const fileUrl = `http://172.30.1.64:3001/uploads/${req.file.filename}`;
+    const fileUrl = `http://192.168.1.17:3001/uploads/${req.file.filename}`;
     res.json({ imageUrl: fileUrl });
   } else {
     res.status(400).json({ error: 'File upload failed' });
