@@ -55,12 +55,15 @@ const SelectedImages = ({ selectedImages,onStart }) => {
             className='t'
             onClick={() => handleTemplateClick(`t${index + 1}`)}
           >
-            {text}
+            <img src={text} alt={text} />
           </div>
         ))}
       </div>
-      <button className='endBtn btnStyle1' onClick={handleDownload}>
+      <button className='endBtn btnStyle1' onClick={handleDownload }>
         완성하기
+      </button>
+      <button className='endBtn btnStyle1' onClick={handleDownload}>
+        인화하기
       </button>
       <button className='backBtn btnStyle1' onClick={goStartPage}>
         처음으로
