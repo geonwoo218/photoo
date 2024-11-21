@@ -8,7 +8,7 @@
   height: 600px;
   position: relative;
   border: 1px solid #00000000;
-  /*margin-top: 300px;*/
+  margin-top: 200px;
 }
 
 .startTitle {
@@ -310,32 +310,35 @@ body {
 }
 
 .t1 {
-  background: url(images/frame1.png);
+  background: url(images/c1.png);
   background-size: cover;
 }
-
+#t1{
+  background: url(images/c1.png);
+  background-size: cover;
+}
 .t2 {
-  background: url(images/frame2.png);
+  background: url(images/c2.png);
   background-size: cover;
 }
 
 .t3 {
-  background: url(images/frame3.png);
+  background: url(images/c3.png);
   background-size: cover;
 }
 
 .t4 {
-  background: url(images/frame4.png);
+  background: url(images/c4.png);
   background-size: cover;
 }
 
 .t5 {
-  background: url(images/frame5.png);
+  background: url(images/c5.png);
   background-size: cover;
 }
 
 .t6 {
-  background: url(images/frame6.png);
+  background: url(images/c6.png);
   background-size: cover;
 }
 

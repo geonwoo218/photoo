@@ -59,7 +59,7 @@ const WebcamCapture = ({ onCapture, cnt }) => {
         countSoundRef.current.currentTime = 0;
         countSoundRef.current.play();
         setIsCapturing(true);
-        setCountdown(3); // 타이머를 3초로 설정
+        setCountdown(5); // 타이머를 3초로 설정
     };
 
     const stopCapturing = () => {
