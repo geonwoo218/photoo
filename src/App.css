@@ -1,20 +1,22 @@
-#root{
+#root {
   padding-top: 20px;
 }
 
 /*======startPage.js===========*/
 .start-page {
   width: 800px;
-  height: 600px;
-  position: relative;
-  border: 1px solid #00000000;
-  margin-top: 200px;
+  height: 650px;
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .startTitle {
   width: 100%;
   height: 100px;
-  line-height: 100px;
+  line-height: 60px;
   font-size: 60px;
   float: left;
   text-align: center;
@@ -22,13 +24,8 @@
   margin-top: 20px;
 }
 
-.startBtn {
-  width: 500px;
-  height: 200px;
+.startTitle span {
   font-size: 40px;
-  margin-left: calc(100% / 2 - 250px);
-  margin-top: 230px;
-  font-weight: bold;
 }
 
 /*======webcam.js===========*/
@@ -39,7 +36,8 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
-  background-color: #fff4ac;
+  background-color: #004225;
+  color: #F5F5F5;
 }
 
 .bodycontainer {
@@ -47,6 +45,7 @@ body {
   height: 980px;
   position: relative;
   /* margin-top: 170px;*/
+  border: 2px solid;
 }
 
 .webcam {
@@ -67,7 +66,7 @@ body {
   width: 200px;
   height: 980px;
   float: left;
-  background-color: #000000;
+  background-color: #C41E3A;
   position: relative;
   color: white;
   display: flex;
@@ -83,7 +82,8 @@ body {
   position: absolute;
   bottom: 0px;
 }
-.timer{
+
+.timer {
   width: 150px;
   text-align: center;
   font-size: 22px;
@@ -91,7 +91,8 @@ body {
   top: 50px;
   left: 25px;
 }
-.captureBtnB{
+
+.captureBtnB {
   width: 170px;
   height: 170px;
   position: absolute;
@@ -102,7 +103,9 @@ body {
   top: 380px;
   left: 15px;
   border-radius: 85px;
+  border: 1px solid black;
 }
+
 .captureBtn {
   width: 150px;
   height: 150px;
@@ -112,6 +115,7 @@ body {
   background-color: white;
   border-radius: 75px;
 }
+
 .captureBtn1 {
   width: 150px;
   height: 50px;
@@ -126,18 +130,19 @@ body {
 }
 
 /*======imgGallery==========*/
-.gallery-container {
-  /*margin-top: 250px;*/
-}
+/*.gallery-container {
+  margin-top: 250px;
+}*/
 
 .image-gallery-container {
   width: 1400px;
   height: 600px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  background: rgb(0, 0, 0);
+  background: #C41E3A;
   justify-items: center;
   align-content: space-evenly;
+  border: 1px solid white;
 }
 
 .image-item {
@@ -146,8 +151,8 @@ body {
 }
 
 .image-item.selected img {
-  box-shadow: 0px 0px 50px rgb(255 255 255);
-  border: 2px solid #000000;
+  box-shadow: 0px 0px 50px #FFD700;
+  border: 2px solid #fff;
   scale: 1.05;
 }
 
@@ -160,6 +165,8 @@ body {
 .selectBottom {
   width: 1400px;
   height: 130px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .galleryImgBtn {
@@ -173,7 +180,8 @@ body {
   font-size: 16px;
   cursor: pointer;
   float: left;
-  border-radius: 50px;
+  background: none;
+  border: none;
 }
 
 .selectBtn {
@@ -182,16 +190,15 @@ body {
   font-size: 16px;
   cursor: pointer;
   float: right;
-  border-radius: 50px;
+  background: none;
+  border: none;
 }
 
 .selectCnt {
-  width: 140px;
   height: 100px;
-  margin-top: 45px;
-  margin-right: 10px;
-  font-size: 60px;
+  font-size: 90px;
   float: right;
+  margin-top: 10px;
 }
 
 /*======selectImg==========*/
@@ -199,7 +206,7 @@ body {
   width: 1000px;
   height: 1000px;
   position: relative;
-  /*margin-top:130px;*/
+  /* overflow: hidden; */
 }
 
 .res-container {
@@ -216,12 +223,10 @@ body {
   margin-left: 50px;
   padding-top: 10px;
   border: 1px solid;
+  position: relative;
 }
 
 .res-imgitem {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
   margin-top: 10px;
 }
 
@@ -233,10 +238,41 @@ body {
   box-sizing: border-box;
 }
 
+.res-text1 {
+  position: absolute;
+  bottom: 35px;
+  font-size: 45px;
+  font-weight: bold;
+  -webkit-text-stroke: 1px rgb(0, 0, 0);
+}
+
+.res-text2 {
+  position: absolute;
+  font-size: 12px;
+  bottom: 0px;
+  right: 5px;
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+}
+
+.forQRt1 {
+  font-size: 160px;
+  bottom: 100px;
+  -webkit-text-stroke: 3px rgb(0, 0, 0);
+}
+
+.forQRt2 {
+  font-size: 40px;
+  right: 10px;
+  -webkit-text-stroke: 0.5px rgb(0, 0, 0);
+}
+
 .forQR {
   margin-top: 1500px;
   width: 1060px;
   height: 3187px;
+  border: 3px solid;
 }
 
 .forQR-imgitem {
@@ -252,7 +288,7 @@ body {
   min-width: 850px;
   min-height: 669px;
   background-color: red;
-  border: 1px solid;
+  border: 3px solid;
   box-sizing: border-box;
 }
 
@@ -287,36 +323,16 @@ body {
   border-radius: 35px;
 }
 
-.endBtn {
-  width: 450px;
-  height: 100px;
-  right: 40px;
-  bottom: 165px;
-  position: absolute;
-  font-size: 45px;
-  font-weight: bold;
-  background-color: #c5ebae;
-}
-
-.backBtn {
-  width: 450px;
-  height: 90px;
-  right: 40px;
-  bottom: 60px;
-  position: absolute;
-  font-size: 45px;
-  font-weight: bold;
-  background-color: #ffc592;
-}
-
 .t1 {
   background: url(images/c1.png);
   background-size: cover;
 }
-#t1{
+
+#t1 {
   background: url(images/c1.png);
   background-size: cover;
 }
+
 .t2 {
   background: url(images/c2.png);
   background-size: cover;
@@ -343,117 +359,89 @@ body {
 }
 
 /*===============버튼 스타일=============*/
-.btnStyle {
-  --b: 3px;
-  /* border thickness */
-  --s: .45em;
-  /* size of the corner */
-  --color: #373B44;
-
-  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
-  color: var(--color);
-  --_p: var(--s);
-  background:
-    conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--color) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
-  transition: .3s linear, color 0s, background-color 0s;
-  outline: var(--b) solid #0000;
-  outline-offset: .6em;
-
-
-  border: 0;
-
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.btnStyle:hover,
-.btnStyle:focus-visible {
-  --_p: 0px;
-  outline-color: var(--color);
-  outline-offset: .05em;
-}
-
-.btnStyle:active {
-  background: var(--color);
-  color: #fff;
-}
-
 .btnStyle1 {
-  letter-spacing: 2px;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #000;
+  background-color: #c0392b;
+  /* 크리스마스 레드 */
+  color: #ffffff;
+  /* 텍스트 색상 */
+  border: 2px solid #ffd700;
+  /* 골드 테두리 */
+  border-radius: 15px;
+  /* 둥근 테두리 */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   cursor: pointer;
-  border: 3px solid;
-  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.btnStyle1:active {
-  box-shadow: 0px 0px 0px 0px;
-  transform: translate(5px, 5px);
-
-}
-
-@media (min-width: 768px) {
-  .btnStyle1 {
-    padding: 0.25em 0.75em;
-  }
-}
-
-.btnStyle2 {
-  align-items: center;
-  background-color: #fee6e3;
-  border: 2px solid #111;
-  border-radius: 8px;
-  box-sizing: border-box;
-  color: #111;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  max-width: 100%;
-  padding: 0 25px;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
   position: relative;
-  text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+  font-size: 45px;
+  font-weight: bold;
 }
 
-.btnStyle2:after {
-  background-color: #111;
-  border-radius: 8px;
-  content: "";
-  display: block;
-  height: 200px;
-  left: 0;
-  width: 100%;
+/* 버튼 호버 효과 */
+.btnStyle1:hover {
+  background-color: #ffd700;
+  /* 골드로 전환 */
+  color: #004225;
+  /* 텍스트를 배경색과 조화되도록 변경 */
+  transform: scale(1.05);
+  /* 확대 효과 */
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.7);
+  /* 더 강한 골드빛 그림자 */
+}
+
+/* 눈송이 효과 */
+.btnStyle1::before {
+  content: '';
   position: absolute;
-  top: -2px;
-  transform: translate(8px, 8px);
-  transition: transform .2s ease-out;
-  z-index: -1;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: url('/src/images/snow.png') repeat;
+  background-size: 50px 50px;
+  /* 눈송이 크기 조정 */
+  opacity: 0.3;
+  z-index: 0;
+  animation: snow 8s linear infinite;
 }
 
-.btnStyle2:hover:after {
-  transform: translate(0, 0);
-}
-
-.btnStyle2:active {
-  background-color: #ffdeda;
-  outline: 0;
-}
-
-.btnStyle2:hover {
-  outline: 0;
-}
-
-@media (min-width: 768px) {
-  .btnStyle2 {
-    padding: 0 40px;
+/* 눈송이 애니메이션 (대각선 이동) */
+@keyframes snow {
+  0% {
+    background-position: 0 0;
   }
+
+  100% {
+    background-position: -200px 200px;
+    /* 대각선 방향으로 이동 */
+  }
+}
+
+/* 텍스트와 눈송이 겹침 방지 */
+.btnStyle1 span {
+  position: relative;
+  z-index: 11;
+}
+
+.startBtn {
+  width: 700px;
+  height: 300px;
+  font-size: 70px;
+  margin-top: 65px;
+}
+
+.endBtn {
+  width: 450px;
+  height: 100px;
+  right: 40px;
+  bottom: 165px;
+  position: absolute;
+}
+
+.backBtn {
+  width: 450px;
+  height: 90px;
+  right: 40px;
+  bottom: 60px;
+  position: absolute;
 }
