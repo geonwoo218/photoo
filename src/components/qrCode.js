@@ -15,80 +15,158 @@ export const generateQRCode = (url, filename) => {
         <html>
           <head>
             <title>QR Code</title>
+            <link rel="stylesheet" href="qqS.css">
             <style>
               body {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                height: 100vh;
-                margin: 0;
-                background-color: #004225;
-                color: #ffffff;
-                font-family: 'Arial', sans-serif;
+                  width: 100%;
+                  height: 100vh;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  flex-direction: column;
+                  margin: 0;
+                  background-color: #004225;
+                  color: #ffffff;
+                  font-family: 'Arial', sans-serif;
+                  box-sizing: border-box;
               }
+              section{
+                  width: 85%;
+                  height: 600px;
+                  border: 1px solid white;
+                  position: relative;
+              }
+              .top{
+                  width: 100%;
+                  height: 80px;
+                  float: left;
+                  display: flex;
+                  justify-content: space-around;
+              }
+              .left{
+                  width: 47%;
+                  height: calc(100% - 80px);
+                  float: left;
+                  display: flex;
+                  justify-content: center;
+                  flex-direction: column;
+                  align-items: center;
+                  margin-left: 20px;
+              }
+
               img {
-                max-width: 300px;
-                height: auto;
-                border: 5px solid #ffd700;
-                border-radius: 15px;
-                margin-bottom: 20px;
-                box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+                  width: 250px;
+                  height: auto;
+                  border: 5px solid #ffd700;
+                  border-radius: 15px;
+                  margin-bottom: 20px;
+                  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
               }
-              h2 {
-                font-size: 24px;
-                margin: 10px 0;
-                text-align: center;
+              .right{
+                  width: 47%;
+                  height: calc(100% - 80px);
+                  float: right;
+                  position: relative;
+                  
               }
-              h3 {
-                font-size: 20px;
-                margin: 5px 0;
-                text-align: center;
+              #email-form{
+                  width: 100%;
+                  height: 100%;
+                  display: flex;
+                  justify-content: center;
+                  flex-direction: column;
+                  align-items: center;
               }
-              h3 span {
-                color: violet;
-                font-weight: bold;
-                text-decoration: underline;
+              #email {
+                  width: 80%;
+                  height: 60px;
+                  padding-left: 20px;
+                  font-size: 22px;
+                  background-color: #ffffff; /* 밝은 배경으로 대비 */
+                  color: #333333; 
+                  border: 4px solid #ffd700; 
+                  border-radius: 10px; 
+                  outline: none; 
+                  transition: all 0.3s ease; 
+                  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+              }
+
+              #email:focus {
+                  border-color: #c0392b; 
+                  box-shadow: 0 0 10px #c0392b; 
+              }
+
+              #email::placeholder {
+                  color: #999999;
+                  font-style: italic; 
               }
               .btnStyle1 {
-                background-color: #c0392b;
-                color: #ffffff;
-                border: 2px solid #ffd700;
-                border-radius: 15px;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-                cursor: pointer;
-                transition: all 0.3s ease-in-out;
-                font-size: 20px;
-                font-weight: bold;
-                padding: 10px 20px;
+                  background-color: #c0392b;
+                  color: #ffffff;
+                  border: 2px solid #ffd700;
+                  border-radius: 15px;
+                  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                  cursor: pointer;
+                  transition: all 0.3s ease-in-out;
+                  font-size: 20px;
+                  font-weight: bold;
+                  padding: 10px 20px;
               }
+
               .btnStyle1:hover {
-                background-color: #ffd700;
-                color: #004225;
-                transform: scale(1.05);
-                box-shadow: 0 8px 20px rgba(255, 215, 0, 0.7);
+                  background-color: #ffd700;
+                  color: #004225;
+                  transform: scale(1.05);
+                  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.7);
               }
+
               .btnStyle1 span {
-                position: relative;
-                z-index: 1;
+                  position: relative;
+                  z-index: 1;
+              }
+              footer{
+                  width: 85%;
+                  height: 150px;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: center;
+              }
+              footer span{
+                  color: #c0392b;
+                  text-decoration: underline;
+              }
+              .homeBtn{
+                  width: 200px;
               }
             </style>
           </head>
           <body>
-            <img src="${qrCodeUrl}" alt="QR Code">
-            <h2>qr 을 찍어서 나온 이미지를 꾹 눌러 저장해주세요</h2>
-            <h3>Instagram <span>@k_geonwoo06</span> Tag Me</h3>
-            
-            <form id="email-form" onsubmit="sendMail(event)">
-              <input 
-                type="email" id="email" 
-                placeholder="이메일을 입력하세요" required/>
-              <input type="hidden" id="filename" name="filename" value="${filename}">
-              <br/>
-              <button type="submit">이메일로 저장하기</button>
-            </form>
-            <button class='backBtn btnStyle1' type="button" onclick="window.location.reload();">처음으로</button>
-            <script>
+            <section>
+              <div class="top">
+                  <h2>QR코드로 받기</h2>
+                  <h2>이메일로 받기</h2>
+              </div>
+              <div class="left">
+                  <img src="${qrCodeUrl}" alt="QR Code" id="qrImg">
+                  <h2>qr 을 찍어서 나온 이미지를 꾹 눌러 저장해주세요</h2>
+                  <h3>아래 와이파이로 연결 필수!!</h3>
+                  <p>wi-fi: &nbsp;&nbsp;&nbsp;&nbsp; password: </p>
+              </div>
+              <div class="right">
+                  <form id="email-form" onsubmit="sendMail(event)">
+                      <input type="email" id="email" placeholder="이메일을 입력하세요" required />
+                      <input type="hidden" id="filename" name="filename" value="${filename}">
+                      <br />
+                      <button type="submit" class="btnStyle1">이메일로 저장하기</button>
+                  </form>
+              </div>
+          </section>
+          <footer>
+              <h3>Instagram <span>@k_geonwoo06</span> Tag Me</h3>
+              <button class='btnStyle1 homeBtn' type="button" onclick="window.location.reload();">처음으로</button>
+          </footer>  
+          <script>
               function sendMail(event) {
                 event.preventDefault();
                 const email = document.getElementById('email').value;

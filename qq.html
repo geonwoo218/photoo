@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>QR Code</title>
+    <style>
+        
+    </style>
+    <link rel="stylesheet" href="qqS.css">
+</head>
+
+<body>
+    <section>
+        <div class="top">
+            <h2>QR코드로 받기</h2>
+            <h2>이메일로 받기</h2>
+        </div>
+        <div class="left">
+            <img src="${qrCodeUrl}" alt="QR Code" id="qrImg">
+            <h2>qr 을 찍어서 나온 이미지를 꾹 눌러 저장해주세요</h2>
+            <h3>아래 와이파이로 연결 필수!!</h3>
+            <p>wi-fi: &nbsp;&nbsp;&nbsp;&nbsp; password: </p>
+        </div>
+        <div class="right">
+            <form id="email-form" onsubmit="sendMail(event)">
+                <input type="email" id="email" placeholder="이메일을 입력하세요" required />
+                <input type="hidden" id="filename" name="filename" value="${filename}">
+                <br />
+                <button type="submit" class="btnStyle1">이메일로 저장하기</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <h3>Instagram <span>@k_geonwoo06</span> Tag Me</h3>
+        <button class='btnStyle1 homeBtn' type="button" onclick="window.location.reload();">처음으로</button>
+    </footer>
+</body>
+
+</html>
