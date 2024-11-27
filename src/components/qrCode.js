@@ -9,13 +9,11 @@ export const generateQRCode = (url, filename) => {
     .then((qrCodeUrl) => {
       // 새로운 창을 열어 QR 코드 및 기타 정보를 표시
       const newWindow = window.open("", "_top", "width=500,height=500");
-
       // 새 창에 HTML 작성
       newWindow.document.write(`
         <html>
           <head>
             <title>QR Code</title>
-            <link rel="stylesheet" href="qqS.css">
             <style>
               body {
                   width: 100%;
@@ -29,12 +27,16 @@ export const generateQRCode = (url, filename) => {
                   color: #ffffff;
                   font-family: 'Arial', sans-serif;
                   box-sizing: border-box;
+                   background-image: url('images/christmas.png');
+                  background-repeat: repeat-x;
+                  background-size:500px;
               }
               section{
                   width: 85%;
                   height: 600px;
                   border: 1px solid white;
                   position: relative;
+                  margin-top: 40px;
               }
               .top{
                   width: 100%;
@@ -42,6 +44,7 @@ export const generateQRCode = (url, filename) => {
                   float: left;
                   display: flex;
                   justify-content: space-around;
+                 
               }
               .left{
                   width: 47%;
@@ -158,7 +161,7 @@ export const generateQRCode = (url, filename) => {
                       <input type="email" id="email" placeholder="이메일을 입력하세요" required />
                       <input type="hidden" id="filename" name="filename" value="${filename}">
                       <br />
-                      <button type="submit" class="btnStyle1">이메일로 저장하기</button>
+                      <button type="submit" class="btnStyle1" id="emailBtn">이메일로 사진 보내기</button>
                   </form>
               </div>
           </section>
@@ -169,6 +172,9 @@ export const generateQRCode = (url, filename) => {
           <script>
               function sendMail(event) {
                 event.preventDefault();
+                const emailBtn =  document.getElementById('emailBtn');
+                emailBtn.textContent = '이메일로 사진 전송 중..';
+                emailBtn.disabled = true;
                 const email = document.getElementById('email').value;
                 const filename = document.getElementById('filename').value;
                 fetch(\`${serverHost}:3001/send-mail\`, {
@@ -178,10 +184,17 @@ export const generateQRCode = (url, filename) => {
                 })
                 .then(response => response.json())
                 .then(data => {
-                  alert('이메일이 전송되었습니다!');
-                  window.location.reload();
+                  alert('이메일로 사진이 전송되었습니다!');
+                  emailBtn.textContent = '이메일로 사진 보내기';
+                  document.getElementById('email').value = "";
+                  emailBtn.disabled = false
                 })
-                .catch(error => alert('이메일 전송 실패!'));
+                .catch(error => {
+                  alert('이메일 전송 실패!')
+                  emailBtn.textContent = '이메일로 사진 보내기';
+                  emailBtn.disabled = false;
+                  });
+                
               }
             </script>
           </body>
