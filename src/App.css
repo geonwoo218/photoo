@@ -30,7 +30,7 @@
 
 .startTitle {
   width: 100%;
-  height: 100px;
+  height: 100px; 
   line-height: 60px;
   font-size: 60px;
   float: left;
@@ -53,6 +53,7 @@ body {
   margin: 0;
   background-color: #004225;
   color: #F5F5F5;
+  overflow: hidden;
 }
 
 .bodycontainer {
@@ -339,37 +340,37 @@ body {
 }
 
 .t1 {
-  background: url(images/c1.png);
+  background: url(../public/images/c1.png);
   background-size: cover;
 }
 
 #t1 {
-  background: url(images/c1.png);
+  background: url(../public/images/c1.png);
   background-size: cover;
 }
 
 .t2 {
-  background: url(images/c2.png);
+  background: url(../public/images/c2.png);
   background-size: cover;
 }
 
 .t3 {
-  background: url(images/c3.png);
+  background: url(../public/images/c3.png);
   background-size: cover;
 }
 
 .t4 {
-  background: url(images/c4.png);
+  background: url(../public/images/c4.png);
   background-size: cover;
 }
 
 .t5 {
-  background: url(images/c5.png);
+  background: url(../public/images/c5.png);
   background-size: cover;
 }
 
 .t6 {
-  background: url(images/c6.png);
+  background: url(../public/images/c6.png);
   background-size: cover;
 }
 
@@ -412,7 +413,7 @@ body {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: url('/src/images/snow.png') repeat;
+  background: url('../public/images/snow.png') repeat;
   background-size: 50px 50px;
   /* 눈송이 크기 조정 */
   opacity: 0.3;

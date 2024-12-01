@@ -59,7 +59,7 @@ const ImageGallery = ({ imgList, onBack }) => {
       <div className='selectBottom'>
         {/* 뒤로 가기 버튼 */}
         <button onClick={onBack} className="back-button">
-          <img src={require('../images/back.png')} alt="다시" className='galleryImgBtn' />
+          <img src={require('../cImages/back.png')} alt="다시" className='galleryImgBtn' />
         </button>
 
         {/* 선택된 이미지 개수 표시 */}
@@ -71,7 +71,7 @@ const ImageGallery = ({ imgList, onBack }) => {
           className="selectBtn"
           disabled={selectedImages.length !== 4} // 4개가 선택되지 않으면 비활성화
         >
-          <img src={require('../images/arrow.png')} alt="화살표" className='galleryImgBtn' />
+          <img src={require('../cImages/arrow.png')} alt="화살표" className='galleryImgBtn' />
         </button>
       </div>
     </div>
