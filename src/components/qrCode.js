@@ -34,7 +34,7 @@ export const generateQRCode = (url, filename) => {
               section{
                   width: 85%;
                   height: 600px;
-                  border: 1px solid white;
+                  box-shadow: 0px 0px 20px #a7a88b;
                   position: relative;
                   margin-top: 40px;
               }
@@ -154,7 +154,7 @@ export const generateQRCode = (url, filename) => {
                   <img src="${qrCodeUrl}" alt="QR Code" id="qrImg">
                   <h2>qr 을 찍어서 나온 이미지를 꾹 눌러 저장해주세요</h2>
                   <h3>아래 와이파이로 연결 필수!!</h3>
-                  <p>wi-fi: &nbsp;&nbsp;&nbsp;&nbsp; password: </p>
+                  <p>wi-fi: IT도제실 &nbsp;&nbsp; password: 11111111 </p>
               </div>
               <div class="right">
                   <form id="email-form" onsubmit="sendMail(event)">

@@ -65,7 +65,7 @@ const SelectedImages = ({ selectedImages, onStart }) => {
 
       {/* 템플릿 선택 버튼 */}
       <div className='template'>
-        {['t1', 't2', 't3', 't4', 't5', 't6'].map((text, index) => (
+        {['t1', 't2', 't3', 't4', 't5', 't6','t7','t8','t9'].map((text, index) => (
           <div
             key={index}
             className={`${text} t`} // 템플릿별 클래스 설정

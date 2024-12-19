@@ -15,8 +15,9 @@ body {
   section {
     width: 85%;
     height: 600px;
-    border: 1px solid white;
     position: relative;
+    margin-top: 40px;
+    box-shadow: 0px 0px 20px #a7a88b
   }
   
   .top {

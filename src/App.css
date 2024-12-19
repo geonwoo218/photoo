@@ -219,10 +219,11 @@ body {
 
 /*======selectImg==========*/
 .res {
-  width: 1000px;
+  width: 1200px;
   height: 1000px;
   position: relative;
-  /* overflow: hidden; */
+  box-shadow: 0px 0px 10px #fbffaf;
+  /* overflow: hidden;*/
 }
 
 .res-container {
@@ -235,7 +236,7 @@ body {
   align-items: center;
   flex-direction: column;
   float: left;
-  margin-top: 20px;
+  margin-top: 40px;
   margin-left: 50px;
   padding-top: 10px;
   border: 1px solid;
@@ -247,10 +248,10 @@ body {
 }
 
 .res-imgitem img {
-  width: 245px;
-  height: 185px;
-  border: 1px solid;
-  background: #ffffff;
+  min-width: 245px;
+  min-height: 185px;
+  border: 1px solid black;
+  background: #94e196;
   box-sizing: border-box;
 }
 
@@ -320,10 +321,10 @@ body {
 }
 
 .template {
-  width: 450px;
-  height: 650px;
+  width: 720px;
+  height: 720px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   position: absolute;
   right: 30px;
@@ -336,44 +337,51 @@ body {
   line-height: 160px;
   padding: 10px;
   margin: 10px;
-  border-radius: 35px;
+  border-radius: 60px;
 }
+
 
 .t1 {
-  background: url(../public/images/c1.png);
-  background-size: cover;
-}
-
-#t1 {
-  background: url(../public/images/c1.png);
+  background: url(../public/images/c19.png);
   background-size: cover;
 }
 
 .t2 {
-  background: url(../public/images/c2.png);
+  background: url(../public/images/c11.png);
   background-size: cover;
 }
 
 .t3 {
-  background: url(../public/images/c3.png);
+  background: url(../public/images/c22.png);
   background-size: cover;
 }
 
 .t4 {
-  background: url(../public/images/c4.png);
+  background: url(../public/images/c13.png);
   background-size: cover;
 }
 
 .t5 {
-  background: url(../public/images/c5.png);
+  background: url(../public/images/c20.png);
   background-size: cover;
 }
 
 .t6 {
-  background: url(../public/images/c6.png);
+  background: url(../public/images/c17.png);
   background-size: cover;
 }
-
+.t7 {
+  background: url(../public/images/c18.png);
+  background-size: cover;
+}
+.t8 {
+  background: url(../public/images/c21.png);
+  background-size: cover;
+}
+.t9 {
+  background: url(../public/images/c7.png);
+  background-size: cover;
+}
 /*===============버튼 스타일=============*/
 .btnStyle1 {
   background-color: #c0392b;
@@ -447,17 +455,17 @@ body {
 }
 
 .endBtn {
-  width: 450px;
+  width: 350px;
   height: 100px;
-  right: 40px;
-  bottom: 165px;
+  right: 400px;
+  bottom: 50px;
   position: absolute;
 }
 
 .backBtn {
-  width: 450px;
-  height: 90px;
-  right: 40px;
-  bottom: 60px;
+  width: 350px;
+  height: 100px;
+  right: 35px;
+  bottom: 50px;
   position: absolute;
 }
