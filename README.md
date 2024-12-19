@@ -1,10 +1,5 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
+리액트를 사용한 인생네컷 프로그램
+웹캠을 연결해 사진을 찍고 원하는 프레임을 골라 이미지 저장
 
 ### `npm start`
 
