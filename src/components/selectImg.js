@@ -65,7 +65,7 @@ const SelectedImages = ({ selectedImages, onStart }) => {
 
       {/* 템플릿 선택 버튼 */}
       <div className='template'>
-        {['t1', 't2', 't3', 't4', 't5', 't6','t7','t8','t9'].map((text, index) => (
+        {['t1', 't2', 't3', 't4', 't5', 't6'].map((text, index) => (
           <div
             key={index}
             className={`${text} t`} // 템플릿별 클래스 설정
@@ -73,17 +73,18 @@ const SelectedImages = ({ selectedImages, onStart }) => {
           >
           </div>
         ))}
+        {/* 완성하기 버튼 */}
+        <button className='endBtn btnStyle1' onClick={handleDownload}>
+          <span>완성하기</span>
+        </button>
+
+        {/* 처음으로 버튼 */}
+        <button className='backBtn btnStyle1' onClick={goStartPage}>
+          <span>처음으로</span>
+        </button>
       </div>
 
-      {/* 완성하기 버튼 */}
-      <button className='endBtn btnStyle1' onClick={handleDownload}>
-        <span>완성하기</span>
-      </button>
 
-      {/* 처음으로 버튼 */}
-      <button className='backBtn btnStyle1' onClick={goStartPage}>
-        <span>처음으로</span>
-      </button>
 
       {/* QR 코드 생성용 컨테이너 (숨겨진 상태에서 사용) */}
       <div className={`res-container ${selectedTemplate} forQR`}>

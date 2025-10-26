@@ -4,7 +4,7 @@ import '../App.css';
 
 // 비디오 설정 (비디오 크기 및 사용자 카메라 사용 설정)
 const videoConstraints = {
-    width: 1300,
+    width: 800,
     facingMode: "user"
 };
 
@@ -21,12 +21,12 @@ const WebcamCapture = ({ onCapture, cnt }) => {
     const countSoundRef = useRef(new Audio('/sound/countSound.mp3'));
 
     // 즉시 사진을 캡처하는 함수
-    /*
+    
     const justCapture = () => {
         const imageSrc = webcamRef.current.getScreenshot();
         onCapture(imageSrc); // 캡처된 이미지를 부모 컴포넌트로 전달
     };
-    */
+    
     // 사진을 캡처하고 비디오에 깜박임 효과를 주는 함수
     const handleCapture = useCallback(() => {
         const imageSrc = webcamRef.current.getScreenshot();
@@ -116,18 +116,21 @@ const WebcamCapture = ({ onCapture, cnt }) => {
                     </div>
                 </div>
 
-                {/* 바로 찍기 버튼 
+                {/* 바로 찍기 버튼 */
                 
                 <div>
                     <button className='captureBtn1' onClick={justCapture}>
                         바로찍기
                     </button>
                 </div>
-                */}
-                {/* 캡처된 이미지 개수 표시 */}
+                }
+
+                {/* 캡처된 이미지 개수 표시 
                 <div className='counter'>
-                    {cnt} / 8
-                </div>
+                    {cnt} / 4
+                </div>*/}
+                
+                
             </div>
         </div>
     );

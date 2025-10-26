@@ -53,7 +53,7 @@ body {
   margin: 0;
   background-color: #004225;
   color: #F5F5F5;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .bodycontainer {
@@ -220,27 +220,29 @@ body {
 /*======selectImg==========*/
 .res {
   width: 1200px;
-  height: 1000px;
+  height: 800px;
   position: relative;
   box-shadow: 0px 0px 10px #fbffaf;
   /* overflow: hidden;*/
 }
 
 .res-container {
-  width: 302px;
-  height: 910px;
-  background-size: cover;
-  background: black;
-  background-color: rgb(0, 0, 0);
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  float: left;
-  margin-top: 40px;
-  margin-left: 50px;
-  padding-top: 10px;
-  border: 1px solid;
-  position: relative;
+  width: 470px;
+    height: 705px;
+    background-size: cover;
+    background: black;
+    background-color: rgb(0, 0, 0);
+    display: flex
+;
+    flex-direction: column;
+    float: left;
+    margin-top: 40px;
+    margin-left: 50px;
+    padding-top: 10px;
+    border: 1px solid;
+    position: relative;
+    justify-content: center;
+    align-items: center;
 }
 
 .res-imgitem {
@@ -248,11 +250,14 @@ body {
 }
 
 .res-imgitem img {
-  min-width: 245px;
-  min-height: 185px;
+  min-width: 400px;
+  min-height: 600px;
   border: 1px solid black;
   background: #94e196;
   box-sizing: border-box;
+  position: absolute;
+  top: 25px;
+  left: 40px;
 }
 
 .res-text1 {
@@ -321,11 +326,11 @@ body {
 }
 
 .template {
-  width: 720px;
-  height: 720px;
+  width: 620px;
+  height: 890px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
   position: absolute;
   right: 30px;
   top: 50px;
@@ -335,9 +340,7 @@ body {
   text-align: center;
   border: 1px solid;
   line-height: 160px;
-  padding: 10px;
-  margin: 10px;
-  border-radius: 60px;
+  border-radius: 20px;
 }
 
 
@@ -455,17 +458,11 @@ body {
 }
 
 .endBtn {
-  width: 350px;
+  width: 300px;
   height: 100px;
-  right: 400px;
-  bottom: 50px;
-  position: absolute;
 }
 
 .backBtn {
-  width: 350px;
+  width: 300px;
   height: 100px;
-  right: 35px;
-  bottom: 50px;
-  position: absolute;
 }
