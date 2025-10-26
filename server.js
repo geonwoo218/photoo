@@ -74,9 +74,9 @@ app.post("/send-mail", async (req, res) => {
 
   try {
     const info = await transporter.sendMail(mailOptions);
-      res.status(200).json({ success: 'sex' });
+      res.status(200).json({ success: '성성공' });
   } catch (err) {
-     res.status(500).json({ failed: 'unsex' });
+     res.status(500).json({ failed: '실패' });
   }
 
 })
