@@ -47,7 +47,7 @@ export const generateQRCode = (url, filename) => {
                  
               }
               .left{
-                  width: 450px;
+                  width: 40 0px;
                   height: calc(100% - 80px);
                   display: flex;
                   justify-content: center;

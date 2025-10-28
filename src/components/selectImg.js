@@ -59,9 +59,6 @@ const SelectedImages = ({ selectedImages, onStart }) => {
         <div className='res-text1'>
           CHANG EUI
         </div>
-        <div className='res-text2'>
-          @k_geonwoo06
-        </div>
       </div>
 
       {/* 템플릿 선택 버튼 */}
@@ -88,7 +85,7 @@ const SelectedImages = ({ selectedImages, onStart }) => {
 
 
 
-      {/* QR 코드 생성용 컨테이너 (숨겨진 상태에서 사용) */}
+      {/* QR 코드 생성용 컨테이너 (숨겨진 상태에서 사용) 
       <div className={`res-container ${selectedTemplate} forQR`}>
         {selectedImages.map((img, index) => (
           <div key={img.id} className={`forQR-imgitem qr${index + 1}`}>
@@ -101,7 +98,7 @@ const SelectedImages = ({ selectedImages, onStart }) => {
         <div className='res-text2 forQRt2'>
           @k_geonwoo06
         </div>
-      </div>
+      </div>*/}
     </div>
   );
 };
