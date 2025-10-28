@@ -340,23 +340,23 @@ body {
 }
 
 .t1 {
-  background: url(../public/images/c24.png);
+  background: url(../public/images/c32.png);
   background-size: cover;
 }
 
 .t2 {
-  background: url(../public/images/c25.png);
-  background-size: cover;
+  background: url(../public/images/c33.png);
+  background-size: contain;
 }
 
 .t3 {
-  background: url(../public/images/c26.png);
-  background-size: cover;
+  background: url(../public/images/c34.png);
+  background-size: contain;
 }
 
 .t4 {
-  background: url(../public/images/c13.png);
-  background-size: cover;
+  background: url(../public/images/c12.png);
+  background-size: auto;
 }
 
 .t5 {
