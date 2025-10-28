@@ -41,10 +41,11 @@ const SelectedImages = ({ selectedImages, onStart }) => {
     }
   };
 
-  // "처음으로" 버튼 클릭 시 호출되는 함수
+  /* "처음으로" 버튼 클릭 시 호출되는 함수
   const goStartPage = () => {
     window.location.reload(); // 페이지 새로고침으로 초기화
   };
+  */
 
   return (
     <div className='res'>
@@ -65,7 +66,7 @@ const SelectedImages = ({ selectedImages, onStart }) => {
 
       {/* 템플릿 선택 버튼 */}
       <div className='template'>
-        {['t1', 't2', 't3', 't4', 't5', 't6'].map((text, index) => (
+        {['t1', 't2', 't3', 't4'].map((text, index) => (
           <div
             key={index}
             className={`${text} t`} // 템플릿별 클래스 설정
@@ -78,10 +79,11 @@ const SelectedImages = ({ selectedImages, onStart }) => {
           <span>완성하기</span>
         </button>
 
-        {/* 처음으로 버튼 */}
+        {/* 처음으로 버튼 
         <button className='backBtn btnStyle1' onClick={goStartPage}>
           <span>처음으로</span>
         </button>
+        */}
       </div>
 
 

@@ -27,9 +27,9 @@ export const generateQRCode = (url, filename) => {
                   color: #ffffff;
                   font-family: 'Arial', sans-serif;
                   box-sizing: border-box;
-                   background-image: url('images/christmas.png');
+                   background-image: url('images/maple.png');
                   background-repeat: repeat-x;
-                  background-size:500px;
+                  background-size:225px;
               }
               section{
                   width: 85%;
@@ -47,18 +47,18 @@ export const generateQRCode = (url, filename) => {
                  
               }
               .left{
-                  width: 47%;
+                  width: 450px;
                   height: calc(100% - 80px);
-                  float: left;
                   display: flex;
                   justify-content: center;
                   flex-direction: column;
                   align-items: center;
-                  margin-left: 20px;
-              }
+                  margin-left: 70px;
+                  float: left;
+                } 
 
               img {
-                  width: 250px;
+                  width: 300px;
                   height: auto;
                   border: 5px solid #ffd700;
                   border-radius: 15px;
@@ -66,10 +66,11 @@ export const generateQRCode = (url, filename) => {
                   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
               }
               .right{
-                  width: 47%;
-                  height: calc(100% - 80px);
+                  width: 600px;
+                  height: 200px;
                   float: right;
                   position: relative;
+                  top: 70px;
                   
               }
               #email-form{
@@ -147,22 +148,15 @@ export const generateQRCode = (url, filename) => {
           <body>
             <section>
               <div class="top">
-                  <h2>QR코드로 받기</h2>
-                  <h2>이메일로 받기</h2>
               </div>
               <div class="left">
-                  <img src="${qrCodeUrl}" alt="QR Code" id="qrImg">
-                  <h2>qr 을 찍어서 나온 이미지를 꾹 눌러 저장해주세요</h2>
-                  <h3>아래 와이파이로 연결 필수!!</h3>
-                  <p>wi-fi: IT도제실 &nbsp;&nbsp; password: 11111111 </p>
+              <img src="${qrCodeUrl}" alt="QR Code" id="qrImg">
               </div>
               <div class="right">
-                  <form id="email-form" onsubmit="sendMail(event)">
-                      <input type="email" id="email" placeholder="이메일을 입력하세요" required />
-                      <input type="hidden" id="filename" name="filename" value="${filename}">
-                      <br />
-                      <button type="submit" class="btnStyle1" id="emailBtn">이메일로 사진 보내기</button>
-                  </form>
+                  <span style="font-size: 50px; font-weight: bold;">QR코드로 받기</span>
+                  <h1>QR 을 찍어서 나온 이미지를 꾹 <br>눌러 저장해주세요</h1>
+                  <h1>아래 와이파이로 연결 필수!!</h1>
+                  <h1>wi-fi: IT도제실 &nbsp;&nbsp; password: 11111111 </h1>
               </div>
           </section>
           <footer>

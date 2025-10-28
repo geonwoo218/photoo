@@ -4,7 +4,7 @@ import '../App.css';
 
 // 비디오 설정 (비디오 크기 및 사용자 카메라 사용 설정)
 const videoConstraints = {
-    width: 800,
+    width: 1000,
     facingMode: "user"
 };
 
@@ -93,6 +93,14 @@ const WebcamCapture = ({ onCapture, cnt }) => {
                         mirrored // 좌우 반전
                         videoConstraints={videoConstraints} // 비디오 설정 적용
                         ref={webcamRef} // 웹캠 참조 설정
+                        // 스타일 추가: 너비와 높이를 100%로 설정하고, object-fit 사용
+                        style={{
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover' // 비디오 비율 유지하면서 컨테이너 채우기 (잘릴 수 있음)
+                            // 또는 'contain' 사용: 비디오 전체 보이게 하되 레터박스 생길 수 있음
+                            // objectFit: 'contain'
+                        }}
                     />
                 </div>
             </div>
