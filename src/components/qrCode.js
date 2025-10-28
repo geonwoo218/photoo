@@ -160,7 +160,6 @@ export const generateQRCode = (url, filename) => {
               </div>
           </section>
           <footer>
-              <h3>Instagram <span>@k_geonwoo06</span> Tag Me</h3>
               <button class='btnStyle1 homeBtn' type="button" onclick="window.location.reload();">처음으로</button>
           </footer>  
           <script>

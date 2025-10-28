@@ -272,7 +272,14 @@ body {
   font-weight: bold;
   -webkit-text-stroke: 0.3px rgb(0, 0, 0);
 }
-
+.res-text2{
+    position: absolute;
+    right: 100px;
+    bottom: 35px;
+    font-size: 12px;
+    -webkit-text-stroke: 0.1px black;
+    font-weight: bold;
+}
 
 .forQRt1 {
   font-size: 160px;

@@ -124,14 +124,14 @@ const WebcamCapture = ({ onCapture, cnt }) => {
                     </div>
                 </div>
 
-                {/* 바로 찍기 버튼 */
+                {/* 바로 찍기 버튼 
                 
                 <div>
                     <button className='captureBtn1' onClick={justCapture}>
                         바로찍기
                     </button>
                 </div>
-                }
+                */}
 
                 {/* 캡처된 이미지 개수 표시 
                 <div className='counter'>

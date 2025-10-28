@@ -59,6 +59,9 @@ const SelectedImages = ({ selectedImages, onStart }) => {
         <div className='res-text1'>
           CHANG EUI
         </div>
+        <div className='res-text2'>
+          @k_geonwoo06
+        </div>
       </div>
 
       {/* 템플릿 선택 버튼 */}
