@@ -21,12 +21,12 @@ const WebcamCapture = ({ onCapture, cnt }) => {
     const countSoundRef = useRef(new Audio('/sound/countSound.mp3'));
 
     // 즉시 사진을 캡처하는 함수
-    
+    /*
     const justCapture = () => {
         const imageSrc = webcamRef.current.getScreenshot();
         onCapture(imageSrc); // 캡처된 이미지를 부모 컴포넌트로 전달
     };
-    
+    */
     // 사진을 캡처하고 비디오에 깜박임 효과를 주는 함수
     const handleCapture = useCallback(() => {
         const imageSrc = webcamRef.current.getScreenshot();
